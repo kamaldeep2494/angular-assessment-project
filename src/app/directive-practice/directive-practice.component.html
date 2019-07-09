@@ -1,0 +1,27 @@
+<!-- <button (click) = "toggle = !toggle" class="btn btn-primary"> Display Details </button> -->
+
+<button (click) = "togglePara()" class="btn btn-primary"> Display Details </button>
+
+<!-- <p [hidden] = "toggle">
+  secret password ='tuna'
+</p> -->
+
+<p *ngIf = "toggle">
+  secret password ='tuna'
+</p>
+
+<!-- <div 
+*ngFor = "let logItem of logArr"
+[ngStyle]="{backgroundColor : logItem >=5 ?'blue' : 'transparent'}" 
+[ngClass]="{'white-text' : logItem >=5}">
+{{logItem}}</div> -->
+
+<div 
+*ngFor = "let logItem of logArr; let i = index;"
+[ngStyle]="{backgroundColor : i >=4 ?'blue' : 'transparent'}" 
+[ngClass]="{'white-text' : i >=4}">
+{{logItem}}</div>
+
+<!-- <p [ngStyle]="{show : toggle}">
+  secret password ='tuna'
+</p> -->
